@@ -6,12 +6,14 @@ interface ProductsPageProps {
   products: Product[];
   onNavigateToCreate: () => void;
   onDeleteProduct: (id: string) => void;
+  onEditProduct: (id: string) => void;
 }
 
 export const ProductsPage: React.FC<ProductsPageProps> = ({ 
-  products, 
-  onNavigateToCreate, 
-  onDeleteProduct 
+  products,
+  onNavigateToCreate,
+  onDeleteProduct,
+  onEditProduct
 }) => {
   return (
     <div className="products-page">
@@ -34,6 +36,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
           <div className="products-grid">
             {products.map(product => (
               <ProductCard
+                onEdit={() => onEditProduct(product.id)}
                 key={product.id}
                 product={product}
                 onDelete={onDeleteProduct}
