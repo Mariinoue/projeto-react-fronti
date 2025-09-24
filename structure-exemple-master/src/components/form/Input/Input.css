@@ -1,0 +1,22 @@
+.custom-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  color: #222;
+  transition: border-color 0.2s;
+}
+.custom-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  .custom-input {
+    background: #232323;
+    color: #f5f5f5;
+    border: 1px solid #444;
+  }
+}

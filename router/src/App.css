@@ -1,0 +1,380 @@
+/* Reset e base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 2px solid #e1e1e1;
+  width: 100%;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Button styles */
+.add-button,
+.submit-button,
+.cancel-button,
+.create-first-button,
+.back-home-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-button,
+.submit-button,
+.create-first-button,
+.back-home-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.add-button:hover,
+.submit-button:hover,
+.create-first-button:hover,
+.back-home-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.cancel-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #7f8c8d;
+}
+
+.delete-button {
+  padding: 8px 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Products container */
+.products-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Products grid */
+.products-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+  place-items: center;
+  width: 100%;
+}
+
+/* Product card */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  max-width: 350px;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.product-description {
+  color: #7f8c8d;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* Create product page */
+.create-product-page {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form styles */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e74c3c;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* 404 Page */
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.not-found-content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-content h1 {
+  font-size: 4rem;
+  color: #e74c3c;
+  margin-bottom: 16px;
+}
+
+.not-found-content h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.not-found-content p {
+  color: #7f8c8d;
+  margin-bottom: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .products-page,
+  .create-product-page {
+    align-items: center;
+    width: 100%;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .not-found-content {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  .not-found-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .product-card {
+    padding: 16px;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
+
+  .product-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .delete-button {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 16px;
+  }
+}

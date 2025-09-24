@@ -1,0 +1,65 @@
+.app-root {
+  font-family: sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-navbar {
+  background: transparent;
+  padding: 16px 0;
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-navbar {
+    border-bottom: 1px solid #333;
+  }
+}
+
+.app-menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.app-menu-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+  color: inherit;
+}
+
+.app-menu-link:hover,
+.app-menu-link.active {
+  background: #ececec;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .app-menu-link:hover,
+  .app-menu-link.active {
+    background: #222;
+  }
+}
+
+.app-content {
+  max-width: 800px;
+  margin: 32px auto;
+  background: transparent;
+  border-radius: 8px;
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
